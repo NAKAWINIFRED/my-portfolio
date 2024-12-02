@@ -1,101 +1,122 @@
+"use client";
+
 import Image from "next/image";
+import Head from "next/head";
+import { useState } from 'react';
+import {BsFillMoonStarsFill} from 'react-icons/bs';
+import{AiFillTwitterCircle, AiFillLinkedin, AiFillYoutube} from 'react-icons/ai';
+import me from "../public/me.png"; 
+
 
 export default function Home() {
+  const [darkMode, setDarkMode] = useState(false);
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className={darkMode ? "dark" : ""}>
+      <Head>
+        <title>Winifred Nakawunde Portfolio</title>
+        <meta name="description" content="Portfolio"></meta>
+        <link rel="icon" href="/favicon.ico"></link>
+      </Head>
+      <main className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900" >
+        <section className="min-h-screen">
+          <nav className="py-10 md-12 flex justify-between  dark:text-white">
+          <h1 className="font-burtons text-xl">My Portfolio</h1>
+          <ul className="flex items-center">
+            <li>
+            <BsFillMoonStarsFill
+                  onClick={() => setDarkMode(!darkMode)}
+                  className=" cursor-pointer text-2xl"
+                />
+            </li>
+            <li>
+                <a
+                  href="https://github.com/NAKAWINIFRED"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8 transition-colors duration-300 hover:from-cyan-600 hover:to-teal-600"
+                >
+                  My GitHub
+                </a>
+            </li>
+          </ul>
+          </nav>
+          <div className="text-center p-10 ">
+            <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">Winifred Nakawunde</h2>
+            <h3 className=" text-2xl py-2  dark:text-white md:text-3xl">Software Engineer.</h3>
+            <p className="text-md py-5 leading-8 text-gray-800  dark:text-white md:text-xl max-w-lg mx-auto">I am a passionate software engineer who loves turning ideas into impactful tech solutions. With strong problem-solving skills and a creative approach, I combine functionality and style in my work.
+            Am  always curious, eager to learn and dedicated to growing alongside the fast-paced world of technology.
+            </p>
+          </div>
+          <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
+            <AiFillTwitterCircle/>
+            <AiFillLinkedin/>
+            <AiFillYoutube/>
+          </div>
+          <div className="relative mx-auto rounded-full w-80 h-80 md:h-96 md:w-96 " >
+             <Image src={me}className="rounded-full w-80 h-80 mt-10 md:h-96 md:w-96" layout="fill" objectFit="cover" />
+          </div>
+        </section>
+        
+       <section>
+         <div>
+          <h3 className="text-3xl py-1 dark:text-white mt-20" >My Journey</h3>
+          <p className="text-md py-2 leading-8 text-gray-800  dark:text-white">My journey into software engineering began with a passion for solving problems and creating impactful solutions. After completing a degree in Software Engineering, I joined the Refactory Academy apprenticeship program, gaining hands-on experience and bridging the gap between theory and practice.</p>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+          <p className="text-md py-2 leading-8 text-gray-800  dark:text-gray-200">I’ve worked on diverse projects using technologies like <span className="text-teal-500"> JavaScript, React, Next.js, Node.js, Express, MongoDB, and Tailwind CSS </span>, building dynamic, responsive web applications. My expertise also extends to tools like figma,Git, GitHub, and Postman, ensuring seamless collaboration and efficient API testing.</p>
+
+          <p className="text-md py-2 leading-8 text-gray-800  dark:text-gray-200">With each project, I’ve refined my skills in crafting sleek interfaces and scalable backends while embracing every challenge as an opportunity to grow. This journey has shaped me into a versatile developer eager to create innovative solutions and drive meaningful impact.</p>
+         </div>
+         <div className="lg:flex gap-10">
+         <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1">
+              <h3 className="text-lg font-medium pt-8 pb-2 py-4 text-teal-600 ">
+                Languages and Frameworks
+              </h3>
+              <p className="py-2">
+              Languages and Frameworks I worked with in my past Projects
+              </p>
+              <p className="text-gray-800 py-1">JavaScript</p>
+              <p className="text-gray-800 py-1">React.js</p>
+              <p className="text-gray-800 py-1">Next.js</p>
+              <p className="text-gray-800 py-1">Html</p>
+              <p className="text-gray-800 py-1">Pug</p>
+              <p className="text-gray-800 py-1">Css</p>
+              <p className="text-gray-800 py-1">Tailwind Css</p>
+          </div>
+          <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
+              
+              <h3 className="text-lg font-medium pt-8 pb-2 ">
+                Code your dream project
+              </h3>
+              <p className="py-2">
+                Do you have an idea for your next great website? Let's make it a
+                reality.
+              </p>
+              <h4 className="py-4 text-teal-600">Design Tools I Use</h4>
+              <p className="text-gray-800 py-1">Photoshop</p>
+              <p className="text-gray-800 py-1">Illustrator</p>
+              <p className="text-gray-800 py-1">Figma</p>
+              <p className="text-gray-800 py-1">Indesign</p>
+            </div>
+            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
+              
+              <h3 className="text-lg font-medium pt-8 pb-2 ">
+                Code your dream project
+              </h3>
+              <p className="py-2">
+                Do you have an idea for your next great website? Let's make it a
+                reality.
+              </p>
+              <h4 className="py-4 text-teal-600">Design Tools I Use</h4>
+              <p className="text-gray-800 py-1">Photoshop</p>
+              <p className="text-gray-800 py-1">Illustrator</p>
+              <p className="text-gray-800 py-1">Figma</p>
+              <p className="text-gray-800 py-1">Indesign</p>
+            </div>
+         </div>
+       </section>
+
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      
     </div>
   );
 }
