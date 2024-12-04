@@ -21,13 +21,11 @@ export default function Home() {
       <main className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900">
         <section className="min-h-screen">
           <nav className="py-10 md:py-12 flex justify-between dark:text-white">
-            <a
-              href="/cv.pdf"
-              download="Winifred_Nakawunde_CV.pdf"
-              className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md transition-colors duration-300 hover:from-cyan-600 hover:to-teal-600"
+          <h1
+              className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md text-center font-bold"
             >
-              Download CV
-            </a>
+              My Portfolio
+            </h1>
             <ul className="flex items-center">
               <li>
                 <BsFillMoonStarsFill
