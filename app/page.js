@@ -51,7 +51,7 @@ export default function Home() {
             </h2>
             <h3 className="text-2xl py-2 dark:text-white md:text-3xl">Software Engineer.</h3>
             <p className="text-md py-5 leading-8 text-gray-800 dark:text-white md:text-xl max-w-lg mx-auto">
-              I am a passionate software engineer who loves turning ideas into impactful tech
+              I am a skilled software engineer who loves turning ideas into impactful tech
               solutions. With strong problem-solving skills and a creative approach, I combine
               functionality and style in my work. Am always curious, eager to learn, and dedicated to
               growing alongside the fast-paced world of technology.
