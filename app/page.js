@@ -163,7 +163,7 @@ import { MdEmail } from "react-icons/md";
 import me from "../public/me.png";
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   return (
     <div className={darkMode ? "dark" : ""}>
@@ -173,12 +173,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <nav className="py-4 flex justify-between items-center px-6 bg-white dark:bg-gray-900 shadow-md fixed w-full z-10">
+      <nav className="py-4 flex justify-between items-center px-6 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 fixed w-full z-10">
+
         <h1 className="text-xl font-bold text-teal-500">My Portfolio</h1>
         <ul className="flex gap-6 text-gray-800 dark:text-white">
           <li><a href="#home" className="hover:text-teal-500">Home</a></li>
           <li><a href="#about" className="hover:text-teal-500">About Me</a></li>
-          <li><a href="#services" className="hover:text-teal-500">Services</a></li>
+          <li><a href="#projects" className="hover:text-teal-500">Projects</a></li>
           <li><a href="#contact" className="hover:text-teal-500">Contact Me</a></li>
         </ul>
         <BsFillMoonStarsFill
@@ -209,7 +210,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="about" className="py-5">
+        <section id="about" className="py-10">
           <h3 className="text-3xl dark:text-white">About Me</h3>
           <p className="text-md py-2 text-gray-800 dark:text-white">
             My journey into software engineering began with a passion for solving problems and
@@ -235,7 +236,7 @@ export default function Home() {
             </p>
         </section>
 
-        <section id="projects" className="py-5">
+        <section id="projects" className="py-10">
           <h3 className="text-3xl dark:text-white">Projects</h3>
           <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
              I have worked on multiple projects, including <span className="text-teal-500">an online examination management system, Day Star Day Care—a data management system for a daycare—a car dealership website, my personal portfolio, </span> and many more. These projects have allowed me to develop a strong foundation in both front-end and back-end development, as well as database management and UI/UX design.
@@ -285,7 +286,11 @@ export default function Home() {
 
         <section id="contact" className="py-10">
           <h3 className="text-3xl dark:text-white">Contact Me</h3>
+          <p className="text-md py-2 text-gray-800 dark:text-gray-200">
+          Feel free to connect with me via LinkedIn or email below for any inquiries, collaborations, or opportunities
+          </p>
           <div className="text-5xl flex justify-center gap-8 py-3 text-gray-600 dark:text-gray-400">
+          
             <a href="https://www.linkedin.com/in/winifred-nakawunde-22a83a303/" target="_blank" rel="noopener noreferrer">
               <AiFillLinkedin />
             </a>
