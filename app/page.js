@@ -190,7 +190,7 @@ export default function Home() {
 
       <main className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900">
         <section id="home" className="min-h-screen flex flex-col justify-center items-center text-center">
-          <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl pt-20">Winifred Nakawunde</h2>
+          <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl pt-28">Winifred Nakawunde</h2>
           <h3 className="text-2xl py-2 dark:text-white md:text-3xl">Software Engineer.</h3>
           <p className="text-md py-5 leading-8 text-gray-800 dark:text-white md:text-xl max-w-lg">
           I am a skilled software engineer who loves turning ideas into impactful tech
