@@ -35,7 +35,7 @@ const Footer = ({ isDarkMode }) => {
     <div className="mt-20">
       <div className="text-center">
         <Image
-          src={isDarkMode ? '/Logo-dark.png' : '/Logo.png'}
+          src={isDarkMode ? "/Logo-dark.png" : "/Logo.png"}
           alt="Logo"
           className="w-36 mx-auto mb-2"
           width={144} // Adjust width as needed
@@ -43,7 +43,7 @@ const Footer = ({ isDarkMode }) => {
         />
         <div className="w-max flex items-center gap-2 mx-auto text-gray-700 hover:text-teal-500">
           <Image
-            src={isDarkMode ? '/mail_icon_dark.png' : '/mail_icon.png'}
+            src={isDarkMode ? "/mail_icon_dark.png" : "/mail_icon.png"}
             alt="Mail Icon"
             className="w-6"
             width={24} // Adjust width as needed

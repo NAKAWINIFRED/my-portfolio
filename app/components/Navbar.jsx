@@ -265,8 +265,8 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           </li>
           <li>
             <a
-              href='#work'
-              className='font-Ovo flex items-center gap-3 hover:text-teal-500'
+              href="#work"
+              className="font-Ovo flex items-center gap-3 hover:text-teal-500"
               onClick={closeMenu}
             >
               <FaBriefcase /> My Work
@@ -275,7 +275,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           <li>
             <a
               href='#contact'
-              className='font-Ovo flex items-center gap-3 hover:text-teal-500'
+              className="font-Ovo flex items-center gap-3 hover:text-teal-500"
               onClick={closeMenu}
             >
               <FaEnvelope /> Contact Me

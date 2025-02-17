@@ -97,14 +97,14 @@ const Contact = () => {
 
   const onSubmit = async (event) => {
     event.preventDefault();
-    setResult('Sending....');
+    setResult("Sending....");
     const formData = new FormData(event.target);
 
     // Appending access key for the form submission
-    formData.append('access_key', '935745ea-ef65-4304-ad31-56705ca36fe7');
+    formData.append("access_key", "935745ea-ef65-4304-ad31-56705ca36fe7");
 
     try {
-      const response = await fetch('https://api.web3forms.com/submit', {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: 'POST',
         body: formData,
       });
@@ -112,15 +112,15 @@ const Contact = () => {
       const data = await response.json();
 
       if (data.success) {
-        setResult('Form Submitted Successfully');
+        setResult("Form Submitted Successfully");
         event.target.reset();
       } else {
-        console.error('Error:', data);
-        setResult(data.message || 'An error occurred, please try again later.');
+        console.error("Error:", data);
+        setResult(data.message || "An error occurred, please try again later.");
       }
     } catch (error) {
       console.error('Error in form submission:', error);
-      setResult('An error occurred, please try again later.');
+      setResult("An error occurred, please try again later.");
     }
   };
 
