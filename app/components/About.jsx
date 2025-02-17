@@ -90,12 +90,12 @@
 // }
 
 // export default About
-import { infoList, toolsData } from '@/public/assets';
+import { infoList, toolsData } from '@/public/assets'; // Ensure this path and export are correct
 import Image from 'next/image';
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const About = ({ isDarkMode }) => {
+const About = ({ isDarkMode = false }) => { // Defaulting isDarkMode to false if not provided
   return (
     <motion.div
       id="about"
@@ -134,7 +134,7 @@ const About = ({ isDarkMode }) => {
           className="w-64 sm:w-80 rounded-3xl max-w-none"
         >
           <Image
-            src="/me.png"
+            src="/me.png" // Ensure this path is correct and image exists in 'public'
             alt="user"
             className="w-full rounded-3xl"
             width={320} // Adjust width as needed
@@ -148,7 +148,7 @@ const About = ({ isDarkMode }) => {
           className="flex-1"
         >
           <p className="mb-10 max-w-2xl font-Ovo text-sm leading-7">
-            I am a dedicated software engineer from Kampala, Uganda, specializing in full-stack development. My expertise spans JavaScript, React.js, Next.js, Node.js, CSS, Java, and more. Over the past year, I have worked on diverse projects, including an online examination monitoring system, building dynamic and scalable applications. My journey began with a passion for problem-solving and creating impactful solutions, leading me to join Refactory’s Academy apprenticeship program for hands-on experience. I enjoy crafting sleek interfaces, optimizing performance, and developing efficient backends. Continuous learning and innovation drive my approach to software development.
+            I am a dedicated software engineer from Kampala, Uganda, specializing in full-stack development...
           </p>
 
           <motion.ul
@@ -164,7 +164,7 @@ const About = ({ isDarkMode }) => {
                 key={index}
               >
                 <Image
-                  src={isDarkMode ? iconDark : icon}
+                  src={isDarkMode ? iconDark : icon} // Ensure correct icon paths
                   alt={title}
                   className="w-7 mt-3"
                   width={28} // Adjust width as needed
@@ -198,7 +198,7 @@ const About = ({ isDarkMode }) => {
                 key={index}
               >
                 <Image
-                  src={tool}
+                  src={tool} // Ensure correct tool image paths
                   alt={`Tool ${index}`}
                   className="w-5 sm:w-7"
                   width={24} // Adjust width as needed
