@@ -89,7 +89,8 @@
 
 // export default Contact
 import React, { useState } from 'react';
-import { motion } from 'motion/react';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 const Contact = () => {
   const [result, setResult] = useState('');
@@ -147,7 +148,7 @@ const Contact = () => {
         transition={{ duration: 0.5, delay: 0.7 }}
         className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo"
       >
-        I'd love to hear from you! If you have any questions, comments or feedback, please use the form below.
+        I'd love to hear from you! If you have any questions, comments, or feedback, please use the form below.
       </motion.p>
 
       <motion.form
@@ -197,7 +198,7 @@ const Contact = () => {
           className="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500 dark:bg-transparent dark:border-[0.5px] dark:hover:bg-darkHover"
         >
           Submit now
-          <img src="/right-arrow-white.png" alt="" className="w-4" />
+          <Image src="/right-arrow-white.png" alt="right arrow" width={16} height={16} />
         </motion.button>
 
         <p className="mt-4">{result}</p>
@@ -207,3 +208,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
